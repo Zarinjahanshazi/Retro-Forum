@@ -14,49 +14,34 @@
 </head>
 <body class="mulish">
     <!--navbar-->
-    <header class="max-w-screen-xl mx-auto">
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+    <header class="max-w-screen-xl mx-auto mulish">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
-            <div class="flex flex-row">
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./home.png" alt="">
-                  </div>
-                </div>
-                </div>
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./pen.png" alt="">
-                  </div>
-                </div>
-                </div>
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./add.png" alt="">
-                  </div>
-                </div>
-                </div>
-                <div class="dropdown dropdown-end">
-                  <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <div class="indicator">
-                      <img src="./flag.png" alt="">
-                    </div>
-                  </div>
-                  </div>
-              <div class="dropdown dropdown-end">
-                <div class="rounded-3xl">
-                  <button class="btn text-center text-white bg-[#7D7DFC]">Sign In</button>
-                </div>
-                
-              </div>
-            </div>
-         
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="tooltip" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
+            </ul>
           </div>
+          <a class="btn btn-ghost font-black text-4xl text-[#12132D]">ReTro</a>
+        </div>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="tooltip" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
+            <div>
+              <button class="btn bg-[#7A7DFC] text-white rounded-full px-6 py-2 p-4 font-bold text-xl">Sign In</button>
+            </div>
+          </ul>
+        </div>
+      </div>
 
           <!--Banner section-->
 
@@ -135,19 +120,20 @@
     </main>
     
     <footer class="bg-gray-100">
-      <footer class="footer footer-center p-10 bg-gray-100 max-w-screen-xl mx-auto">
-        <h2 class="text-4xl font-bold">ReTro</h2>
-        <p class="font-bold">
+      <div class="space-y-6 p-10 bg-gray-100 max-w-screen-xl mx-auto">
+        <h2 class="text-4xl font-bold text-center">ReTro</h2>
+        <p class="font-bold text-center">
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br> piece of classical Latin literature from 45 BC
         </p> 
-        <div class="grid grid-flow-col gap-4">
+        <div class="flex justify-center gap-6">
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></i></a>
         </div>
-        <p>2017, All Rights Reserved.</p>
-      </footer>
+        <div class="border-b-2 "></div>
+        <p class="text-center">2017, All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script src="./index.js"></script>
