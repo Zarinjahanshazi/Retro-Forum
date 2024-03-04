@@ -10,6 +10,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!--style css-->
     <link rel="stylesheet" href="./styles/style.css">
+    <style>
+      #spinner{
+        display: none;
+      }
+    </style>
 
 </head>
 <body class="mulish">
@@ -47,32 +52,30 @@
 
           <section class="mt-10">
             <div class="hero rounded-3xl bg-[#12132D] h-[550px]"  style="background-image: url(images/bgbanner.png)">
-              <div class="hero-content flex text-neutral-content">
+              <div class="hero-content  text-neutral-content flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-28">
                 <div>
-                  <p class="font-black text-6xl ">Welcome to the<span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
-                  <p>Share your favorite opinion and win and wp forum coffee mug!</p>
+                  <p class="font-black text-6xl mb-4">Welcome to the<span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text mt-4">ReTro</span> Forum</p>
+                  <p class="mb-4">Share your favorite opinion and win and wp<br> forum coffee mug!</p>
                     <!-- button section  -->
                   <section>
                     <input type="text" id="input-id" placeholder="Search here anything" class="input input-bordered input-primary w-full max-w-xs" />
                     <button onclick="inputClicked()" class="btn btn-success">Search</button>
                   </section>
+                  <div id="spinner"><span class="loading loading-spinner loading-md"></span></div>
                 </div>
-                <div class="bg-white p-12 flex flex-auto gap-4 rounded-[32px] text-[#12132DCC] text-2xl mulish font-medium border-red-600">
-                  <div class="">
-                    <p>Registered Users</p>
-                    <p>Forum</p>
-                    <p>Topics</p>
-                    <p>Replies</p>
-                    
+                <div class="bg-white flex flex-auto gap-4 rounded-lg text-[#12132DCC] text-2xl mulish font-medium border-red-600 mx-auto p-12">
+                  <div>
+                    <p class="mb-2">Registered Users</p>
+                    <p class="mb-2">Forum</p>
+                    <p class="mb-2">Topics</p>
+                    <p class="mb-2">Replies</p>
                   </div>
-                  <div class="">
-                    <p>01</p>
-                    <p>05</p>
-                    <p>01</p>
-                    <p>01</p>
+                  <div>
+                    <p class="mb-2">01</p>
+                    <p class="mb-2">05</p>
+                    <p class="mb-2">01</p>
+                    <p class="mb-2">01</p>
                   </div>
-                  
-                  
                 </div>
 
               </div>

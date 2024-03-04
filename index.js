@@ -1,5 +1,6 @@
 
 
+
 let allPostData = [];
 
 function loadPost() {
@@ -114,13 +115,17 @@ function displayFindPost(posts) {
         </div>
         `;
     postContainer.appendChild(postDiv);
+    toggleSpinner('none');
   }
 }
-
+const toggleSpinner = displayStyle =>{
+  document.getElementById('spinner').style.display = displayStyle;
+}
 function inputClicked() {
   const input = document.getElementById("input-id");
   const inputText = input.value;
   //console.log(inputText);
+  toggleSpinner('block');
   loadPostByCategory(inputText);
 }
 
