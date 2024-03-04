@@ -15,14 +15,14 @@
 <body class="mulish">
     <header class="max-w-screen-xl mx-auto mulish">
       <!--navbar-->
-      <div class="navbar bg-base-100">
+      <div class="navbar bg-base-100 mt-10">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li class="tooltip" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+            <ul tabindex="0" class="menu inter menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="tooltip " data-tip="Home"><a><img src="./home.png" alt=""></a></li>
               <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
               <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
               <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
@@ -32,7 +32,7 @@
         </div>
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li class="tooltip" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+            <li class="tooltip inter" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
             <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
             <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
             <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
@@ -47,36 +47,32 @@
 
           <section class="mt-10">
             <div class="hero rounded-3xl bg-[#12132D] h-[550px]"  style="background-image: url(images/bgbanner.png)">
-              <div class="hero-overlay rounded-3xl bg-opacity-60"></div>
               <div class="hero-content flex text-neutral-content">
                 <div>
-                  <p class="font-black text-6xl ">Welcome to the <span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
+                  <p class="font-black text-6xl ">Welcome to the<span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
                   <p>Share your favorite opinion and win and wp forum coffee mug!</p>
-                  <div>
-                    
-                    <label class="input input-bordered flex items-center gap-1">
-                      <input type="text" class="grow" placeholder="Search" />
-                      <button class="btn btn-primary rounded-2xl">Primary</button>
-                    </label>
-                  </div>
+                    <!-- button section  -->
+                  <section>
+                    <input type="text" id="input-id" placeholder="Search here anything" class="input input-bordered input-primary w-full max-w-xs" />
+                    <button onclick="inputClicked()" class="btn btn-success">Search</button>
+                  </section>
                 </div>
-                <div class="bg-white p-12 text-[#12132D50] text-base font-medium border-red-600">
-                  <div class="flex justify-around">
+                <div class="bg-white p-12 flex flex-auto gap-4 rounded-[32px] text-[#12132DCC] text-2xl mulish font-medium border-red-600">
+                  <div class="">
                     <p>Registered Users</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Forum</p>
-                    <p>05</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Topics</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Replies</p>
+                    
+                  </div>
+                  <div class="">
+                    <p>01</p>
+                    <p>05</p>
+                    <p>01</p>
                     <p>01</p>
                   </div>
+                  
+                  
                 </div>
 
               </div>
@@ -89,38 +85,28 @@
         <h1 class="text-5xl font-bold mb-2">Let's Discuss</h1>
         <p>You can run unit tests and view the result directly within the app.The<br>intregrated testing features allow for a streamline.</p>
       </section>
-      <section class="flex">
-          <div id="post-container">
+      <!-- first section  -->
+      <section class="flex flex-col lg:flex-row">
+          <div class="flex-1">
+            <div id="post-container">
             
-          </div>
-          <div class=" w-[400px] bg-gray-100 p-4 m-2 rounded-lg">
-              <p class="text-2xl font-bold">Title</p>
-              <p id="title-body"></p>
-          </div>
-      </section>
-      <section class="text-center my-8">
-            <h1 class="text-4xl font-bold">Latest Posts</h1>
-            <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
-      </section>
-      <section class="my-8">
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
             </div>
           </div>
-        </div>
-        <div id="card-item">
+          <!-- title area  -->
+          <div class="w-[300px] p-4">
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h1>Title</h1>
+                <div id="title-card">
 
-        </div>
+                </div>
+              </div>
+
+
+          </div>
       </section>
 
-
       <!--Join Our Forum section-->
-      <section class="mulish ">
+      <section class="mulish mt-28 ">
         <div class="hero bg-base-200 rounded-3xl bg-[#12132D] h-[403px]">
           <div class="hero-content pl-24 flex-col lg:flex-row-reverse">
             <img src="./images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
@@ -133,6 +119,20 @@
         </div>
 
       </section>
+      <!-- second section  -->
+      <section class="text-center mulish my-8">
+            <h1 class="text-4xl font-bold">Latest Posts</h1>
+            <p class="inter">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+      </section>
+      <!-- card section  -->
+      <section class="my-8">
+        <div id="card-item" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+        </div>
+     </section>
+
+
+      
     </main>
     
     <footer class="bg-gray-100 mulish mt-10">
@@ -154,5 +154,6 @@
 
     <script src="./index.js"></script>
     <script src="js/card.js"></script>
+    <script src="./js/title.js"></script>
 </body>
 </html>

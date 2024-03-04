@@ -1,10 +1,11 @@
-function loadPost(){
-    fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`)
+function loadPost(inputText){
+    fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputText}`)
     .then(res => res.json())
     .then(data => displayPost(data.posts))
 }
 function displayPost(posts){
     const postContainer = document.getElementById('post-container');
+    postContainer.textContent = '';
     for(const post of posts){
         const postDiv = document.createElement('div');
         //console.log(post)
@@ -27,17 +28,10 @@ function displayPost(posts){
         postContainer.appendChild(postDiv);
     }
 }
-loadPost();
 
-//eventhandeler
-function addToTitleArea(){
-    //parent
-    const calculationEntry = document.getElementById('title-card');
-
-    //create child
-    const p = document.createElement('p');
-    p.classList.add('mt-2');
-    p.innerHTML = `Clicked`;
-    //append child with parent
-    calculationEntry.appendChild(p);
+function inputClicked(){
+    const input = document.getElementById('input-id');
+    const inputText = input.value;
+    //console.log(inputText);
+    loadPost(inputText);
 }
